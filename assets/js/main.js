@@ -47,3 +47,36 @@ var swiper = new Swiper('.discover__container', {
         rotate: 10,
     },
 });
+
+// =============Video================//
+const videoFile = document.getElementById('video-file'),
+    videoButton = document.getElementById('video-button'),
+    videoIcon = document.getElementById('video-icon')
+
+function playPause(){
+    if(videoFile.paused){
+        // Play Video
+        videoFile.play()
+
+        // We change the icon
+        videoIcon.classList.add('ri-pause-line')
+        videoIcon.classList.remove('ri-play-line')
+    } else{
+        // pause Video
+        videoFile.pause()
+
+        // We change the icon back to play
+        videoIcon.classList.remove('ri-pause-line')
+        videoIcon.classList.add('ri-play-line')
+    }
+}
+
+videoButton.addEventListener('click', playPause)
+
+function finalVideo(){
+    // When video ends the icon changes
+    videoIcon.classList.remove('ri-pause-line')
+    videoIcon.classList.add('ri-play-line')
+}
+
+videoFile.addEventListener('ended', finalVideo)
