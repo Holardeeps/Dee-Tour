@@ -80,3 +80,12 @@ function finalVideo(){
 }
 
 videoFile.addEventListener('ended', finalVideo)
+
+// Show Scroll Up
+function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+    // When scroll is higher than 200 viewport  height add the show scroll
+    if(this.scrollY >= 200) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll');
+}
+
+window.addEventListener('scroll', scrollUp)
