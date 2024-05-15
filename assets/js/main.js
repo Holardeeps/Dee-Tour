@@ -140,7 +140,7 @@ themeButton.addEventListener("click", () =>{
     localStorage.setItem("selected-icon", getCurrentIcon())
 })
 
-// Scroll Reveal Animation
+// Scroll Reveal Animation fi
 
 const sr = ScrollReveal({
     distance: "60px",

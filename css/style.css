@@ -1051,7 +1051,7 @@ input {
 /* For tall screens on mobile and desktop */
 @media screen and (min-height: 721px){
     body{
-        margin: 0;
+        margin: 0px;
     }
 
     /* .home__container,
